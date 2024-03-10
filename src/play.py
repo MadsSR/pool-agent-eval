@@ -15,7 +15,7 @@ def create_table(n_balls=5):
 
 
 def get_play_config() -> dict:
-    with open("src/play_config.json", "r") as fp:
+    with open("src/config.json", "r") as fp:
         return json.load(fp)["play"]
 
 
