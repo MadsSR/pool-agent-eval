@@ -1,7 +1,7 @@
 import fastfiz as ff
 from fastfiz_renderer import GameHandler
 from stable_baselines3 import PPO
-from agent import PPOAgent, Agent
+from agents import Agent
 import json
 from typing import Optional
 

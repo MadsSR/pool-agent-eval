@@ -3,7 +3,7 @@ from enum import Enum
 import logging
 from play import play
 from stable_baselines3 import PPO
-from agent import PPOAgent
+from agents import PPOAgent
 from fetch_models import list_models, fetch_model
 
 
@@ -102,12 +102,18 @@ def main():
 
         case Mode.PLAY.value:
             if args.balls and 2 >= args.balls >= 16:
-                raise ValueError("Balls must be between 2 and 16")
+                raise ValueError("Number of balls must be between 2 and 16")
 
             model = PPO.load(args.model)
             agent = PPOAgent(model)
 
             play(agent, args.balls, args.episodes)
+
+        case Mode.EVALUATE.value:
+            raise NotImplementedError("Evaluation not implemented yet")
+
+        case _:
+            raise ValueError("Invalid mode")
 
 
 if __name__ == "__main__":
