@@ -14,13 +14,13 @@ def create_table(n_balls=5):
     return ts
 
 
-def get_config() -> dict:
+def get_play_config() -> dict:
     with open("src/play_config.json", "r") as fp:
-        return json.load(fp)
+        return json.load(fp)["play"]
 
 
 def play(agent: Agent, balls: Optional[int] = None, episodes: Optional[int] = None):
-    config = get_config()
+    config = get_play_config()
 
     if balls is None:
         if config["balls"] and 2 >= config["balls"] >= 16:
