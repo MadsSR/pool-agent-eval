@@ -96,9 +96,5 @@ ENV/
 env.bak/
 venv.bak/
 
-
-# # # #
-
 logs/*
 models/*
-src/play_config.json

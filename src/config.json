@@ -1,0 +1,8 @@
+{
+  "play": {
+    "episodes": 100,
+    "balls": 2,
+    "shot_speed_factor": 50,
+    "auto_play": true
+  }
+}
